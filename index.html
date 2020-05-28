@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+</head>
+<body>
+    <p>Display a random image each time the buttons is clicked!</p>
+    <p> You get a <span id="text"></span>  </p>
+    
+    <button class="getPics"> Click ! </button>
+    <br>
+    <img id="randPics" src="https://d30y9cdsu7xlg0.cloudfront.net/png/45447-200.png">
+    <script>var randPics = document.querySelector("#randPics");
+        var getPics = document.querySelector(".getPics");
+        var textElem = document.querySelector("#text");
+        
+        //array to store images for the random image generator
+        var picsGallery = picsGallery = [{img: "https://i.ibb.co/nw415dt/2.jpg", text:'Efico is an eye-opener and have helped me to make the right decision on the skills that fit my personality type in just a limited time frame of joining the platform Anyawu Glory Unilag' },
+        {img: "https://i.ibb.co/ZXKBryW/1.jpg", text:'As a chemical engineering student, I did the Aspen Hysys program, and to be sincere, the level of training has impacted me in so many ways Emmanuel osuagwu FUTO'},
+         {img: "https://i.ibb.co/KD6Lw5B/3.jpg", text:'I used to be scared of what I would do after graduation until EFICO presented me with a better and a real sense of Direction, Efico has taught me that its not about Jacks of all trades, but developing mastery of forestanding skills Efico has shown me that excellence in ones professional pursuit begins first with the discovery of self; now, I know myself and the skills relevant to my personality. I am now helping other achieve that feat Sharon c. Ubani UNIUYO'}];
+        
+        getPics.addEventListener("click", function(){ 
+           
+         //generate random no to select the random images
+        var rnd = Math.floor(Math.random() * picsGallery.length);
+        //change the pics locations of the source
+          randPics.src=picsGallery[rnd].img;
+          text.innerHTML = picsGallery[rnd].text;
+          });</script>
+    </body>
+</html>
